@@ -5,8 +5,8 @@
    Tutorial 10
    Case Problem 2
 
-   Author: 
-   Date:   
+   Author: Meadow Green
+   Date:   2-3-20
    
    Filename: hg_report.js
 	
