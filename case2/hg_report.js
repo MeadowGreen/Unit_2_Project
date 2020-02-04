@@ -26,7 +26,7 @@ var ratingReport = "<h1>Customer Reviews</h1> <h2>" + ratingsAvg + " out of 5 st
 
 for(var i = 0; i < 3; i++){
     ratingReport += "<div class='review'> <h1>" + ratingTitles[i] + "</h1> <table> <tr><th>By</th><td>" + ratingAuthors[i] + "</td></tr> <tr><th>Review Date</th><td>" + ratingDates[i] + "</td></tr> <tr><th>Rating</th><td>";
-    for(var j = 1; j < ratings.length; j++){
+    for(var j = 0; j < ratings[i]; j++){
         ratingReport += "<img src='hg_star.png'/>";
     }
     ratingReport += "</td></tr></table>" + ratingSummaries[i] + "</div>";
