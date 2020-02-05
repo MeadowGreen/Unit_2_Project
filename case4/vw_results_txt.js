@@ -5,8 +5,8 @@
    Tutorial 10
    Case Problem 4
 
-   Author: 
-   Date:   
+   Author: Meadow Green
+   Date:   2-5-20
    
    Filename: vw_results.js
    

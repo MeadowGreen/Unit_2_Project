@@ -27,19 +27,26 @@
       information for the donor
       
 */
-
-var donorTotal = 0;
-donors.forEach(calcSum());
+//starts the total at a value of 0
+var donationTotal = 0;
+//finds the total donations
+donors.forEach(function calcSum(donorAmt) {
+   donationTotal += donorAmt[9];
+});
+//displays the total number of donors and total donations
 var summaryTable = "<table> <tr><th>Donors</th><td>" + donors.length + "</td></tr>  <tr><th>Total Donations</th><td>$" + donationTotal.toLocaleString() + "</td></tr> </table>";
 
 document.getElementById("donationSummary").innerHTML = summaryTable;
 
 var majorDonors = [];
-majorDonors = donors.filter(findMajorDonors());
-majorDonors.sort(donorSortDescending());
-majorDonors.forEach(writeDonorRow());
+majorDonors = donors.filter(findMajorDonors);
+majorDonors.sort(function donorSortDescending(a, b) {
+   return b[9] - a[9];
+});
 
+//adds the table to the html
 var donorTable = "<table> <caption>Major Donors</caption> <tr> <th>Donation</th><th>Donor ID</th> <th>Date</th><th>Name</th><th>Address</th> <th>Phone</th><th>E-mail</th></tr>";
+majorDonors.forEach(writeDonorRow);
 donorTable += "</table>";
 document.getElementById("donorTable").innerHTML = donorTable;
 
